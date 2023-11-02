@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:utils_plus/iteratable_extension.dart';
+import 'package:utils_plus/Extensions/iteratable_extension.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,7 +37,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
@@ -46,9 +45,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-List<int> testingData = [7,1,2,3,4,5,6];
-
+  List<int> testingData = [7, 1, 2, 3, 4, 5, 6];
 
   @override
   void initState() {
@@ -56,6 +53,7 @@ List<int> testingData = [7,1,2,3,4,5,6];
     print(testingData.sortDescending());
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Container();

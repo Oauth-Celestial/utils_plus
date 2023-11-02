@@ -26,19 +26,22 @@ extension IterableMethods<T> on Iterable<T> {
   /// sortDescending
   /// sorts list of integer in descending order
 
-   E sortDescending<E extends Iterable<num>>() {
+  E sortDescending<E extends Iterable<num>>() {
     var toSort = [...this];
-    
+
     toSort.sort();
     return toSort.reversed.toList() as E;
   }
 
-
- Iterable<T> filterMe({ required bool Function(T element) basedOn }){
-
+  Iterable<T> filterMe({required bool Function(T element) basedOn}) {
     return where(basedOn);
   }
 
+  T? get getFirstOrNull {
+    return isEmpty ? null : first;
+  }
 
-
+  T? get getLastOrNull {
+    return isEmpty ? null : last;
+  }
 }
